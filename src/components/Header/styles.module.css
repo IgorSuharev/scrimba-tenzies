@@ -1,0 +1,11 @@
+.Header__h1 {
+  font: bold 25.6px Karla;
+  color: #2B283A;
+  letter-spacing: -0.768px;
+}
+
+.Header__desc {
+  font: 13.11px Inter;
+  color: #4A4E74;
+  letter-spacing: -0.393px;
+}
