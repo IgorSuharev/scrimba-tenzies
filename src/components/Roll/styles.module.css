@@ -1,0 +1,13 @@
+.rollButton {
+  width: 92.16px;
+  height: 35.84px;
+  background-color: #5035FF;
+  color: #FFF;
+  font-family: Karla;
+  font-size: 16.384px;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 3.81px;
+  border: none;
+  box-shadow: 0 3.2px 3.84px #d8d8d8;
+}

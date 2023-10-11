@@ -1,5 +1,6 @@
 import Dice from '../Dice/Dice'
 import Header from '../Header/Header'
+import Roll from '../Roll/Roll'
 import styles from './styles.module.css'
 
 export default function App() {
