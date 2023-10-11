@@ -10,4 +10,6 @@
   border-radius: 3.81px;
   border: none;
   box-shadow: 0 3.2px 3.84px #d8d8d8;
+
+  cursor: pointer;
 }

@@ -1,4 +1,4 @@
-.dice {
+.die {
   width: 35.84px;
   height: 35.84px;
   border-radius: 3.813px;
@@ -9,5 +9,10 @@
   
   font: bold 20.589px Karla;
   text-align: center;
-  
+
+  cursor: pointer;
+}
+
+.die_frozen {
+  background: #59E391;
 }

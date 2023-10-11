@@ -1,19 +1,18 @@
 import styles from './styles.module.css'
-import Dice from '../Dice/Dice'
+import Die from '../Die/Die'
 
-export default function DiceGrid() {
+export default function DiceGrid(props) {
+  const diceGrid = props.dice.map((die, ind) => (
+    <Die
+      key={ind}
+      value={die.value}
+      frozen={die.frozen}
+      onClick={() => props.toggleDie(ind)}
+    />
+  ))
   return (
     <div className={styles.diceGrid}>
-      <Dice value='1' frozen/>
-      <Dice value='2' />
-      <Dice value='1' frozen/>
-      <Dice value='4' />
-      <Dice value='5' />
-      <Dice value='3' />
-      <Dice value='3' />
-      <Dice value='5' />
-      <Dice value='6' />
-      <Dice value='1' frozen/>
+      {diceGrid}
     </div>
   )
 }
