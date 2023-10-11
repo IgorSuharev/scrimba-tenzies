@@ -1,3 +1,4 @@
+import Dice from '../Dice/Dice'
 import Header from '../Header/Header'
 import styles from './styles.module.css'
 

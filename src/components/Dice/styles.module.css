@@ -1,0 +1,13 @@
+.dice {
+  width: 35.84px;
+  height: 35.84px;
+  border-radius: 3.813px;
+  border: none;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  color: #2B283A;
+  background: #FFF;
+  
+  font: bold 20.589px Karla;
+  text-align: center;
+  
+}
