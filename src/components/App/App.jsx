@@ -11,7 +11,7 @@ export default function App() {
 
   const [dice, setDice] = useState(() => Array(10).fill(0).map((_, i) => ({
     value: randomDie(),
-    frozen: i % 2 === 0
+    frozen: false
   })));
 
   function toggleDie(index) {
