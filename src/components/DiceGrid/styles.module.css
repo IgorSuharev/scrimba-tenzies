@@ -1,0 +1,6 @@
+.diceGrid {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+  column-gap: 17.92px;
+  row-gap: 18.56px;
+}
