@@ -58,8 +58,8 @@ export default function App() {
       <main className={styles.main}>
         <div className={styles.main__inner}>
           <Header />
-          <DiceGrid dice={dice} toggleDie={toggleDie}/>
-          <GameButton {...gameButtonProps}/>
+          <DiceGrid success={isDiceAreTheSame()} dice={dice} toggleDie={toggleDie} />
+          <GameButton {...gameButtonProps} />
         </div>
       </main>
     </div>

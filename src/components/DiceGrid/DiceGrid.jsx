@@ -7,6 +7,7 @@ export default function DiceGrid(props) {
       key={ind}
       value={die.value}
       frozen={die.frozen}
+      success={props.success}
       onClick={() => props.toggleDie(ind)}
     />
   ))

@@ -5,8 +5,10 @@ export default function Die(props) {
   return (
     <button
       className={classNames(
-        styles.die,
-        { [styles.die_frozen]: props.frozen }
+        styles.die, {
+          [styles.die_frozen]: props.frozen,
+          [styles.die_success]: props.success
+        }
       )}
       onClick={props.onClick}
     >

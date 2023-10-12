@@ -22,5 +22,9 @@
 }
 
 .die_frozen {
-  background: #59E391;
+  background: #B0E0E6;
+}
+
+.die_success {
+  background: #FFD700;
 }
