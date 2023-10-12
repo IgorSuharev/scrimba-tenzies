@@ -27,4 +27,5 @@
 
 .die_success {
   background: #FFD700;
+  pointer-events: none;
 }
