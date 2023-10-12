@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import DiceGrid from '../DiceGrid/DiceGrid'
 import Header from '../Header/Header'
-import RollButton from '../RollButton/RollButton'
+import GameButton from '../GameButton/GameButton'
 import styles from './styles.module.css'
 
 export default function App() {
@@ -35,7 +35,7 @@ export default function App() {
         <div className={styles.main__inner}>
           <Header />
           <DiceGrid dice={dice} toggleDie={toggleDie}/>
-          <RollButton onClick={rollDice}/>
+          <GameButton onClick={rollDice}/>
         </div>
       </main>
     </div>
