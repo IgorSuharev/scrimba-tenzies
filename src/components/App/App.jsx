@@ -23,9 +23,11 @@ export default function App() {
   const [dice, setDice] = useState(() => randomDiceArray(10));
   //#endregion
 
+  function handleMouseDown() {
+    new Audio(clickButton).play();
+  }
 
   function toggleDie(index) {
-    new Audio(clickButton).play();
     setDice(oldDice => oldDice.map((die, i) => ({
       ...die,
       frozen: i === index ? !die.frozen : die.frozen
@@ -54,13 +56,14 @@ export default function App() {
     onClick: rollDice,
     value: 'Roll'
   };
+  gameButtonProps.onMouseDown = handleMouseDown
 
   return (
     <div className={styles.App}>
       <main className={styles.main}>
         <div className={styles.main__inner}>
           <Header />
-          <DiceGrid success={isDiceAreTheSame()} dice={dice} toggleDie={toggleDie} />
+          <DiceGrid onMouseDown={handleMouseDown} success={isDiceAreTheSame()} dice={dice} toggleDie={toggleDie} />
           <GameButton {...gameButtonProps} />
         </div>
       </main>

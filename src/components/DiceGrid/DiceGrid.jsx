@@ -6,7 +6,7 @@ export default function DiceGrid(props) {
   if (props.success) {
     new Audio(successSoundEffect).play()
   }
-  
+
   const diceGrid = props.dice.map((die, ind) => (
     <Die
       key={ind}
@@ -14,6 +14,7 @@ export default function DiceGrid(props) {
       frozen={die.frozen}
       success={props.success}
       onClick={() => props.toggleDie(ind)}
+      onMouseDown={props.onMouseDown}
     />
   ))
   return (

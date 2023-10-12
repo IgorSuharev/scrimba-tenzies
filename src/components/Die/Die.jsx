@@ -11,6 +11,7 @@ export default function Die(props) {
         }
       )}
       onClick={props.onClick}
+      onMouseDown={props.onMouseDown}
     >
       {props.value}
     </button>
