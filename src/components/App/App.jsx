@@ -3,6 +3,7 @@ import DiceGrid from '../DiceGrid/DiceGrid'
 import Header from '../Header/Header'
 import GameButton from '../GameButton/GameButton'
 import styles from './styles.module.css'
+import clickButton from '/sounds/clickButton.mp3'
 
 export default function App() {
   //#region Secondary functions
@@ -24,6 +25,7 @@ export default function App() {
 
 
   function toggleDie(index) {
+    new Audio(clickButton).play();
     setDice(oldDice => oldDice.map((die, i) => ({
       ...die,
       frozen: i === index ? !die.frozen : die.frozen
