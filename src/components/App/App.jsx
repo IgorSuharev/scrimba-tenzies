@@ -5,14 +5,23 @@ import GameButton from '../GameButton/GameButton'
 import styles from './styles.module.css'
 
 export default function App() {
+  //#region Secondary functions
   function randomDie() {
     return Math.floor(Math.random() * 6) + 1;
   }
 
-  const [dice, setDice] = useState(() => Array(10).fill(0).map((_, i) => ({
-    value: randomDie(),
-    frozen: false
-  })));
+  function randomDiceArray(n) {
+    return Array.from({length: n}, () => ({
+      value: randomDie(),
+      frozen: false
+    }))
+  }
+  //#endregion
+
+  //#region States
+  const [dice, setDice] = useState(() => randomDiceArray(10));
+  //#endregion
+
 
   function toggleDie(index) {
     setDice(oldDice => oldDice.map((die, i) => ({
@@ -28,6 +37,21 @@ export default function App() {
     })));
   }
 
+  function resetDice() {
+    setDice(randomDiceArray(10))
+  }
+
+  function isDiceAreTheSame() {
+    return dice.every(die => die.value === dice[0].value && die.frozen);
+  }
+
+  const gameButtonProps = isDiceAreTheSame() ? {
+    onClick: resetDice,
+    value: 'Reset Game'
+  } : {
+    onClick: rollDice,
+    value: 'Roll'
+  };
 
   return (
     <div className={styles.App}>
@@ -35,7 +59,7 @@ export default function App() {
         <div className={styles.main__inner}>
           <Header />
           <DiceGrid dice={dice} toggleDie={toggleDie}/>
-          <GameButton onClick={rollDice}/>
+          <GameButton {...gameButtonProps}/>
         </div>
       </main>
     </div>
