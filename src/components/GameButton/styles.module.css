@@ -13,3 +13,11 @@
 
   cursor: pointer;
 }
+
+.gameButton:hover {
+  box-shadow: 0 3.2px 3.84px #b1b1b1;
+}
+
+.gameButton:active {
+  box-shadow: inset 0 3.2px 3.84px #2d1aac;
+}
