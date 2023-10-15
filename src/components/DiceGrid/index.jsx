@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './DiceGrid.module.css'
 import Die from '../Die'
 import successSoundEffect from '/sounds/success.wav'
 

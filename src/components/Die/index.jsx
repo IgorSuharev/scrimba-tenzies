@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './Die.module.css'
 import classNames from 'classnames'
 
 export default function Die(props) {

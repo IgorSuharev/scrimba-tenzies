@@ -2,7 +2,7 @@ import { useState } from 'react'
 import DiceGrid from '../DiceGrid'
 import Header from '../Header'
 import GameButton from '../GameButton'
-import styles from './styles.module.css'
+import styles from './App.module.css'
 import clickButton from '/sounds/clickButton.mp3'
 
 export default function App() {

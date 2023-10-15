@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './GameButton.module.css'
 
 export default function RollButton(props) {
   return (
