@@ -12,7 +12,7 @@ export default function App() {
   }
 
   function randomDiceArray(n) {
-    return Array.from({length: n}, () => ({
+    return Array.from({ length: n }, () => ({
       value: randomDie(),
       frozen: false
     }))
@@ -59,14 +59,10 @@ export default function App() {
   gameButtonProps.onMouseDown = handleMouseDown
 
   return (
-    <div className={styles.App}>
-      <main className={styles.main}>
-        <div className={styles.main__inner}>
-          <Header />
-          <DiceGrid onMouseDown={handleMouseDown} success={isDiceAreTheSame()} dice={dice} toggleDie={toggleDie} />
-          <GameButton {...gameButtonProps} />
-        </div>
-      </main>
-    </div>
+    <main className={styles.main}>
+      <Header />
+      <DiceGrid onMouseDown={handleMouseDown} success={isDiceAreTheSame()} dice={dice} toggleDie={toggleDie} />
+      <GameButton {...gameButtonProps} />
+    </main>
   )
 }

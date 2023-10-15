@@ -1,18 +1,14 @@
 .Header__h1 {
   margin: 0;
-  font: bold 25.6px Karla;
+  font: bold 1.6rem Karla;
   color: #2B283A;
-  letter-spacing: -0.768px;
+  letter-spacing: -0.05rem;
 }
 
 .Header__desc {
   margin: 0;
-  width: 232.96px;
-  font: 13.11px Inter;
+  width: 14.55rem;
+  font: 0.8rem Inter;
   color: #4A4E74;
-  letter-spacing: -0.393px;
-}
-
-.Header__desc_frozen {
-  color: #59E391;
+  letter-spacing: -0.02rem;
 }
