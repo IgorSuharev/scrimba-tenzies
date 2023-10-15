@@ -9,16 +9,16 @@ export default function useDiceArray() {
     return Array.from({ length: n }, () => ({
       value: randomDie(),
       frozen: false
-    }))
+    }));
   }
 
-  const [diceArray, setDiceArray] = useState(() => randomDiceArray(10))
+  const [diceArray, setDiceArray] = useState(() => randomDiceArray(10));
 
   function toggleDie(index) {
     setDiceArray(diceArray.map((die, i) => ({
       ...die,
       frozen: i === index ? !die.frozen : die.frozen
-    })))
+    })));
   }
 
   function rollDiceArray() {
@@ -29,7 +29,7 @@ export default function useDiceArray() {
   }
 
   function resetDiceArray() {
-    setDiceArray(randomDiceArray(10))
+    setDiceArray(randomDiceArray(10));
   }
   
   return [diceArray, toggleDie, rollDiceArray, resetDiceArray];

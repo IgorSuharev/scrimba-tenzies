@@ -1,12 +1,12 @@
-import DiceGrid from '../DiceGrid'
-import Header from '../Header'
-import GameButton from '../GameButton'
-import styles from './App.module.css'
-import clickButton from '/sounds/clickButton.mp3'
-import useDiceArray from '../../hooks/useDiceArray'
+import DiceGrid from '../DiceGrid';
+import Header from '../Header';
+import GameButton from '../GameButton';
+import styles from './App.module.css';
+import clickButton from '/sounds/clickButton.mp3';
+import useDiceArray from '../../hooks/useDiceArray';
 
 export default function App() {
-  const [diceArray, toggleDie, rollDiceArray, resetDiceArray] = useDiceArray()
+  const [diceArray, toggleDie, rollDiceArray, resetDiceArray] = useDiceArray();
 
   function handleMouseDown() {
     new Audio(clickButton).play();
@@ -36,5 +36,5 @@ export default function App() {
       />
       <GameButton {...gameButtonProps} />
     </main>
-  )
+  );
 }
