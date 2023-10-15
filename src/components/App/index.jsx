@@ -6,21 +6,21 @@ import clickButton from '/sounds/clickButton.mp3'
 import useDiceArray from '../../hooks/useDiceArray'
 
 export default function App() {
-  const [dice, toggleDie, rollDice, resetDice] = useDiceArray()
+  const [diceArray, toggleDie, rollDiceArray, resetDiceArray] = useDiceArray()
 
   function handleMouseDown() {
     new Audio(clickButton).play();
   }
 
-  function isDiceAreTheSame() {
-    return dice.every(die => die.value === dice[0].value && die.frozen);
+  function areDiceValuesEqual() {
+    return diceArray.every(die => die.value === diceArray[0].value && die.frozen);
   }
 
-  const gameButtonProps = isDiceAreTheSame() ? {
-    onClick: resetDice,
+  const gameButtonProps = areDiceValuesEqual() ? {
+    onClick: resetDiceArray,
     value: 'Reset Game'
   } : {
-    onClick: rollDice,
+    onClick: rollDiceArray,
     value: 'Roll'
   };
   gameButtonProps.onMouseDown = handleMouseDown;
@@ -30,8 +30,8 @@ export default function App() {
       <Header />
       <DiceGrid
         onMouseDown={handleMouseDown}
-        success={isDiceAreTheSame()}
-        dice={dice}
+        success={areDiceValuesEqual()}
+        diceArray={diceArray}
         toggleDie={toggleDie}
       />
       <GameButton {...gameButtonProps} />

@@ -7,7 +7,7 @@ export default function DiceGrid(props) {
     new Audio(successSoundEffect).play()
   }
 
-  const diceGrid = props.dice.map((die, ind) => (
+  const diceGrid = props.diceArray.map((die, ind) => (
     <Die
       key={ind}
       value={die.value}
