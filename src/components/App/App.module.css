@@ -1,11 +1,5 @@
 :root {
-  font-size: 24px;
-}
-
-@media (max-width: 600px) {
-  :root {
-    font-size: 4vw;
-  }
+  font-size: min(4vw, 24px);
 }
 
 body {
