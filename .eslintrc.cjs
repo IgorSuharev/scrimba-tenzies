@@ -16,5 +16,11 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'react/jsx-handler-names': ['error', {
+      "eventHandlerPrefix": 'handle',
+      "eventHandlerPropPrefix": 'on',
+      "checkLocalVariables": false,
+      "checkInlineFunction": false
+    }]
   },
 }
