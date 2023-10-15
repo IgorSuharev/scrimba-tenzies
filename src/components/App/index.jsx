@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import DiceGrid from '../DiceGrid/DiceGrid'
-import Header from '../Header/Header'
-import GameButton from '../GameButton/GameButton'
+import DiceGrid from '../DiceGrid'
+import Header from '../Header'
+import GameButton from '../GameButton'
 import styles from './styles.module.css'
 import clickButton from '/sounds/clickButton.mp3'
 

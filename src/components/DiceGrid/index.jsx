@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import Die from '../Die/Die'
+import Die from '../Die'
 import successSoundEffect from '/sounds/success.wav'
 
 export default function DiceGrid(props) {
