@@ -15,14 +15,14 @@ export default function useDiceArray() {
   const [diceArray, setDiceArray] = useState(() => randomDiceArray(10))
 
   function toggleDie(index) {
-    setDiceArray(oldDiceArray => oldDiceArray.map((die, i) => ({
+    setDiceArray(diceArray.map((die, i) => ({
       ...die,
       frozen: i === index ? !die.frozen : die.frozen
     })))
   }
 
   function rollDiceArray() {
-    setDiceArray(oldDiceArray => oldDiceArray.map(die => ({
+    setDiceArray(diceArray.map(die => ({
       ...die,
       value: die.frozen ? die.value : randomDie()
     })));
