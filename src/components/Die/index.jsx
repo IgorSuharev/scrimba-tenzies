@@ -1,5 +1,5 @@
-import styles from './Die.module.css'
-import classNames from 'classnames'
+import styles from './Die.module.css';
+import classNames from 'classnames';
 
 export default function Die(props) {
   return (
@@ -15,5 +15,5 @@ export default function Die(props) {
     >
       {props.value}
     </button>
-  )
+  );
 }

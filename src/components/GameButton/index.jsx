@@ -1,4 +1,4 @@
-import styles from './GameButton.module.css'
+import styles from './GameButton.module.css';
 
 export default function RollButton(props) {
   return (
@@ -9,5 +9,5 @@ export default function RollButton(props) {
     >
       {props.value}
     </button>
-  )
+  );
 }
