@@ -23,7 +23,6 @@ export default function App() {
     onClick: rollDiceArray,
     value: 'Roll'
   };
-  gameButtonProps.onMouseDown = handleButtonsMouseDown;
 
   return (
     <main className={styles.main}>
@@ -34,7 +33,10 @@ export default function App() {
         diceArray={diceArray}
         toggleDie={toggleDie}
       />
-      <GameButton {...gameButtonProps} />
+      <GameButton
+        {...gameButtonProps}
+        onMouseDown={handleButtonsMouseDown}
+      />
     </main>
   );
 }
