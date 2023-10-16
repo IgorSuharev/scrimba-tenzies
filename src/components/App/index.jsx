@@ -16,7 +16,7 @@ export default function App() {
     return diceArray.every(die => die.value === diceArray[0].value && die.frozen);
   }
 
-  const gameButtonProps = areDiceValuesEqual() ? {
+  const gameButtonConditionalProps = areDiceValuesEqual() ? {
     onClick: resetDiceArray,
     value: 'Reset Game',
   } : {
@@ -34,7 +34,7 @@ export default function App() {
         toggleDie={toggleDie}
       />
       <GameButton
-        {...gameButtonProps}
+        {...gameButtonConditionalProps}
         onMouseDown={handleButtonsMouseDown}
       />
     </main>
