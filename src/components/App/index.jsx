@@ -8,7 +8,7 @@ import useDiceArray from '../../hooks/useDiceArray';
 export default function App() {
   const [diceArray, toggleDie, rollDiceArray, resetDiceArray] = useDiceArray();
 
-  function handleMouseDown() {
+  function handleButtonsMouseDown() {
     new Audio(clickButton).play();
   }
 
@@ -18,18 +18,18 @@ export default function App() {
 
   const gameButtonProps = areDiceValuesEqual() ? {
     onClick: resetDiceArray,
-    value: 'Reset Game'
+    value: 'Reset Game',
   } : {
     onClick: rollDiceArray,
     value: 'Roll'
   };
-  gameButtonProps.onMouseDown = handleMouseDown;
+  gameButtonProps.onMouseDown = handleButtonsMouseDown;
 
   return (
     <main className={styles.main}>
       <Header />
       <DiceGrid
-        onMouseDown={handleMouseDown}
+        onMouseDown={handleButtonsMouseDown}
         success={areDiceValuesEqual()}
         diceArray={diceArray}
         toggleDie={toggleDie}
