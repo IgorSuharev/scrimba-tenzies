@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/main.jsx', './src/components/**/index.jsx'],
+  content: ['./index.html', './src/components/**.jsx', './src/components/**/index.jsx'],
   theme: {
     fontFamily: {
       'karla': 'Karla, Arial, sans-serif',
