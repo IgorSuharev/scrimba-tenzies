@@ -1,9 +1,9 @@
-import DiceGrid from '../DiceGrid';
-import Header from '../Header';
-import GameButton from '../GameButton';
-import styles from './App.module.css';
+import DiceGrid from './DiceGrid';
+import Header from './Header';
+import GameButton from './GameButton';
+import styles from './App/App.module.css';
 import clickButton from '/sounds/clickButton.mp3';
-import useDiceArray from '../../hooks/useDiceArray';
+import useDiceArray from '../hooks/useDiceArray';
 
 export default function App() {
   const [diceArray, toggleDie, rollDiceArray, resetDiceArray] = useDiceArray();
@@ -25,7 +25,8 @@ export default function App() {
   };
 
   return (
-    <main className={styles.main}>
+    <main className='w-80 h-80 rounded-xl p-7 flex flex-col justify-between items-center text-center
+    bg-neutral-100'>
       <Header />
       <DiceGrid
         onMouseDown={handleButtonsMouseDown}
