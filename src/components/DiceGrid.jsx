@@ -1,5 +1,4 @@
-import styles from './DiceGrid.module.css';
-import Die from '../Die';
+import Die from './Die';
 import successSoundEffect from '/sounds/success.wav';
 
 export default function DiceGrid(props) {
@@ -18,7 +17,7 @@ export default function DiceGrid(props) {
     />
   ));
   return (
-    <div className={styles.diceGrid}>
+    <div className='grid grid-rows-2 grid-cols-5 gap-5'>
       {diceGrid}
     </div>
   );

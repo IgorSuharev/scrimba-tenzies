@@ -1,5 +1,0 @@
-.diceGrid {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(5, 1fr);
-  gap: 1.15rem;
-}
